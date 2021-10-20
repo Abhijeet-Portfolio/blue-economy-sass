@@ -1,0 +1,48 @@
+/*=================================
+  Header styling starts here
+=================================*/
+
+header {
+    padding: 22px 0;
+    .wrapper { @include flex(row,space-between,null,center);}
+
+    nav { 
+        width: 66%;
+        @include flex(row,space-between);
+
+        ul { width: 80%}
+
+        li {
+            @include boxsizing;
+            padding: 5px 3%;
+            border-right: 2px solid #e2e2e2;
+            transform: skew(-21deg);
+
+            &:last-child { border: 0;}
+        }
+
+        a {
+            color: #a2abb0;
+            font-size: 12px;
+            text-transform: uppercase;
+            transform: skew(21deg);
+        }
+    }
+
+    .search {
+        text-indent: -9999px;
+
+        &::after{ @include icon('\f002',20px);}
+    }
+
+    .hamburger {
+        display: none;
+        text-indent: -9999px;
+
+        &::before { @include icon('\f0c9',25px);}
+    }
+}
+
+/*=================================
+  Header styling ends here
+=================================*/
