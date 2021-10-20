@@ -6,13 +6,13 @@
     .wrapper {
         width: 100%;
         @include flex(row);
+    }
 
-        div {
-            @include boxsizing;
-            width: 50%;
-            background-color: #5eabd7;
-            text-align: center;
-        }
+    &__summit {
+        @include boxsizing;
+        width: 50%;
+        background-color: #5eabd7;
+        text-align: center;
     }
 
     h2 {
@@ -30,7 +30,7 @@
         line-height: 1.9;
     }
 
-    .link {
+    &__summit__link {
         margin: 50px 0;
 
         li {
@@ -50,7 +50,7 @@
         }
     }
 
-    .venue {
+    &__summit__venue {
         margin-top: 65px;
         border-top: 1px solid #59a0cb;
 

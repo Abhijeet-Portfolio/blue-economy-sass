@@ -29,7 +29,7 @@
     align-items: $alignitem;
     -ms-flex-wrap: $wrap;
     flex-wrap: $wrap;
-  }
+}
 
 // icon
 @mixin icon($icon,$size:10px,$float:right) {
@@ -40,14 +40,16 @@
   text-indent: 0;
 }
 
-// box-shadow
-@mixin boxShadow($horizontal,$vertical,$color) {
-  -webkit-box-shadow: $horizontal $vertical $color;
-  box-shadow: $horizontal $vertical $color;
+// skew
+@mixin skew($deg) {
+  -webkit-transform: skew($deg);
+      -ms-transform: skew($deg);
+          transform: skew($deg);
 }
 
-// rotate Y
-@mixin rotateY($deg) {
-  -webkit-transform: rotateY($deg);
-          transform: rotateY($deg);
+// rotate
+@mixin rotate($value) {
+  -webkit-transform: rotate($value);
+      -ms-transform: rotate($value);
+          transform: rotate($value);
 }

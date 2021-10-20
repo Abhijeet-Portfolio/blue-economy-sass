@@ -7,7 +7,7 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, .featured-articles__saving h5, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
@@ -136,16 +136,20 @@ header {
     header nav li {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
+      -webkit-transform: skew(-21deg);
+      -ms-transform: skew(-21deg);
+      transform: skew(-21deg);
       padding: 5px 3%;
-      border-right: 2px solid #e2e2e2;
-      transform: skew(-21deg); }
+      border-right: 2px solid #e2e2e2; }
       header nav li:last-child {
         border: 0; }
     header nav a {
+      -webkit-transform: skew(21deg);
+      -ms-transform: skew(21deg);
+      transform: skew(21deg);
       color: #a2abb0;
       font-size: 12px;
-      text-transform: uppercase;
-      transform: skew(21deg); }
+      text-transform: uppercase; }
   header .search {
     text-indent: -9999px; }
     header .search::after {
@@ -191,6 +195,8 @@ header {
       z-index: -1;
       position: absolute;
       bottom: -35px;
+      -webkit-transform: rotate(-29deg);
+      -ms-transform: rotate(-29deg);
       transform: rotate(-29deg); }
   .blue-economy p {
     -webkit-box-sizing: border-box;
@@ -215,6 +221,8 @@ header {
       position: absolute;
       top: -30px;
       right: 30%;
+      -webkit-transform: rotate(-29deg);
+      -ms-transform: rotate(-29deg);
       transform: rotate(-29deg); }
 
 .world-ocean {
@@ -228,12 +236,12 @@ header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row; }
-    .world-ocean .wrapper div {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 50%;
-      background-color: #5eabd7;
-      text-align: center; }
+  .world-ocean__summit {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    background-color: #5eabd7;
+    text-align: center; }
   .world-ocean h2 {
     padding: 63px 0 44px;
     color: #fffeff;
@@ -245,29 +253,29 @@ header {
     color: #eef4fa;
     font-size: 14px;
     line-height: 1.9; }
-  .world-ocean .link {
+  .world-ocean__summit__link {
     margin: 50px 0; }
-    .world-ocean .link li {
+    .world-ocean__summit__link li {
       width: 22.5%;
       padding: 16px 0;
       background-color: #ffffff; }
-      .world-ocean .link li:last-child {
+      .world-ocean__summit__link li:last-child {
         background-color: #ffe401; }
-    .world-ocean .link a {
+    .world-ocean__summit__link a {
       color: #000000;
       font-size: 12px;
       font-weight: 600;
       text-transform: uppercase; }
-  .world-ocean .venue {
+  .world-ocean__summit__venue {
     margin-top: 65px;
     border-top: 1px solid #59a0cb; }
-    .world-ocean .venue li {
+    .world-ocean__summit__venue li {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       width: 49.6%; }
-      .world-ocean .venue li:first-child {
+      .world-ocean__summit__venue li:first-child {
         border-right: 1px solid #59a0cb; }
-    .world-ocean .venue a {
+    .world-ocean__summit__venue a {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       width: 100%;
@@ -275,18 +283,18 @@ header {
       color: #1f4e62;
       text-transform: capitalize;
       font-size: 14px; }
-      .world-ocean .venue a::before {
+      .world-ocean__summit__venue a::before {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 0px 5%;
         border-right: 1px solid #59a0cb; }
-    .world-ocean .venue li:first-child a::before {
+    .world-ocean__summit__venue li:first-child a::before {
       content: "";
       float: left;
       font-family: 'fontAwesome';
       font-size: 22px;
       text-indent: 0; }
-    .world-ocean .venue li:last-child a::before {
+    .world-ocean__summit__venue li:last-child a::before {
       content: "";
       float: left;
       font-family: 'fontAwesome';
@@ -312,54 +320,76 @@ header {
       right: 47.4%;
       bottom: 0;
       background-color: #5fabd7; }
-  .featured-articles ul {
-    width: 27.5%;
-    max-height: 300px;
+  .featured-articles__lists {
+    width: 30.2%;
+    max-height: 500px;
+    margin-top: 80px;
     margin-left: 10%;
     position: relative;
     display: inline-block;
     overflow-y: scroll;
     scrollbar-width: 5px; }
-    .featured-articles ul::before {
+    .featured-articles__lists::-webkit-scrollbar {
+      width: 4px; }
+    .featured-articles__lists::-webkit-scrollbar-track {
+      background: #f4f4f4; }
+    .featured-articles__lists::-webkit-scrollbar-thumb {
+      background-color: #d5d5d5; }
+    .featured-articles__lists::before {
       content: ' ';
       width: 0.8%;
       min-height: 660px;
       position: absolute;
-      top: 20px;
-      left: 2%;
+      top: 1px;
+      left: 5%;
       background-color: #e1e1e1; }
-    .featured-articles ul li {
+    .featured-articles__lists li {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 78.5%;
       padding: 0 6%;
       border: 1px solid #f1f1f1;
-      margin: 18px 5%;
+      margin: 18px 0 18px 15%;
       display: block;
       position: relative; }
-      .featured-articles ul li::before {
+      .featured-articles__lists li::before {
         content: ' ';
-        width: 10px;
-        min-height: 10px;
+        width: 15px;
+        min-height: 15px;
         border-radius: 50%;
         position: absolute;
         top: 28px;
-        left: -5%;
+        left: -15.2%;
         background-color: blue; }
-    .featured-articles ul h3 {
+      .featured-articles__lists li:first-child {
+        margin: 0 15%; }
+    .featured-articles__lists .active {
+      background-color: #b7b67d; }
+      .featured-articles__lists .active::before {
+        background-color: #b7b67d; }
+      .featured-articles__lists .active h3 {
+        color: #fdfffd; }
+      .featured-articles__lists .active p {
+        color: #e4e0d5; }
+    .featured-articles__lists h3 {
       margin: 15px 0 8px;
       color: #343434;
       font-size: 14px;
       font-weight: 600;
       text-transform: uppercase; }
-    .featured-articles ul p {
+    .featured-articles__lists p {
       padding: 0 1% 11px;
       color: #848484;
       font-size: 13px; }
-  .featured-articles .saving {
+  .featured-articles__saving {
     width: 32.1%;
-    padding: 20px 5%;
+    padding: 20px 3.8%;
     margin-left: 4.1%;
+    margin-top: 80px;
     display: inline-block;
+    position: absolute;
     background-color: #dae4e5; }
-    .featured-articles .saving div {
+    .featured-articles__saving div {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -373,12 +403,53 @@ header {
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: end; }
-    .featured-articles .saving h4 {
+    .featured-articles__saving h4, .featured-articles__saving h5 {
       margin: 10px 0 20px;
       color: #424242;
       text-transform: uppercase;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 800; }
+    .featured-articles__saving h5 {
+      color: #798889;
+      font-size: 12px; }
+    .featured-articles__saving p {
+      margin: 30px 0;
+      color: #4d5455;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 2;
+      text-align: justify; }
+    .featured-articles__saving a:first-child {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 60%;
+      padding: 6px 0 5px;
+      border: 1px solid #b7b67d;
+      position: relative;
+      color: #5f6565;
+      font-size: 14px;
+      text-transform: capitalize;
+      text-align: center; }
+      .featured-articles__saving a:first-child::before {
+        content: "";
+        float: left;
+        font-family: 'fontAwesome';
+        font-size: 18px;
+        text-indent: 0;
+        padding: 5px 4%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #b7b67d;
+        color: #f5f1ec; }
+    .featured-articles__saving a:last-child {
+      width: 30%;
+      padding: 12px 0;
+      background-color: #ffffff;
+      color: #000000;
+      font-size: 12px;
+      text-align: center;
+      text-transform: uppercase; }
 
 .infographic .wrapper {
   overflow: hidden; }

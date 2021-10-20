@@ -14,18 +14,18 @@ header {
 
         li {
             @include boxsizing;
+            @include skew(-21deg);
             padding: 5px 3%;
             border-right: 2px solid #e2e2e2;
-            transform: skew(-21deg);
 
             &:last-child { border: 0;}
         }
 
         a {
+            @include skew(21deg);
             color: #a2abb0;
             font-size: 12px;
             text-transform: uppercase;
-            transform: skew(21deg);
         }
     }
 
