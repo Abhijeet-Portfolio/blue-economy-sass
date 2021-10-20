@@ -1,0 +1,82 @@
+// infographic section starts
+
+.infographic {
+    .wrapper { overflow: hidden;}
+
+    h2 {
+        padding: 17px 0;
+        position: relative;
+        color: #a0a0a0;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 9px;
+
+        &::after {
+            content: ' ';
+            width: 5.9%;
+            padding: 2px 0;
+            position: absolute;
+            right: 47.4%;
+            bottom: 0;
+            background-color: #5fabd7;
+        }
+    }
+
+    ul {
+        margin: 50px 0 112px;
+        @include flex(row);
+        overflow-x: scroll;
+        
+        &::-webkit-scrollbar { height: 15px;}
+        &::-webkit-scrollbar-track { background: #cfdce4;}
+        &::-webkit-scrollbar-thumb { background-color: #5eabd7;}
+
+        li {
+            min-width: 36%;
+            margin: 10px 2px 58px;
+            position: relative;
+        }
+
+        div {
+            @include boxsizing;
+            width: 80%;
+            padding: 20px 11%;
+            position: absolute;
+            left: 10%;
+            bottom: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+
+            h3 {
+                margin: 10px 0 20px;
+                font-weight: 600;
+            }
+
+            p  {
+                margin-bottom: 25px;
+                color: #a1a6aa;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            span {
+                width: 23%;
+                padding: 15px 0;
+                margin: 0 auto;
+                display: block;
+                background-color: #ffffff;
+                clip-path: circle(50%);
+            }
+
+            a {
+                text-indent: -9999px;
+
+                &::before { @include icon('\f105',30px)}
+            }
+        }
+    }
+}
+
+// infographic section ends

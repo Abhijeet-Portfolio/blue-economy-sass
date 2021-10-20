@@ -1,0 +1,51 @@
+/*=================================
+  Footer styling starts here
+=================================*/
+
+footer {
+    background-color: #2f2f2f;
+    padding: 30px 0;
+
+    .wrapper {@include flex(row,space-between,null,center);}
+
+    h2 {
+        color: #787878;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .social-media {
+        @include flex(row,space-between,null,center);
+        width: 33%;
+    }
+
+    ul {
+        @include flex(row,space-between);
+        width: 50%;
+
+        a { 
+            color: #7a7a7a;
+            text-indent: -9999px;
+        }
+
+        li:first-child a::before { @include icon('\f09a',22px);}
+        li:nth-child(2) a::before { @include icon('\f099',22px);}
+        li:nth-child(3) a::before { @include icon('\f0d5',22px);}
+        li:nth-child(4) a::before { @include icon('\f0e1',22px);}
+    }
+
+    .contact-us {
+        width: 40%;
+        padding: 16px 0;
+        background-color: #7a7a7a;
+        color: #bfbfbf;
+        font-size: 12px;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+/*=================================
+  Footer styling ends here
+=================================*/
